@@ -1,0 +1,20 @@
+{
+    "billing": {
+        "address": "123 Main Street",
+        "cc": {
+            "expiration": "01/2022",
+            "last4": "1234"
+        },
+        "phone": "555-111-1111"
+    },
+    "data": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "email": "john.doe@mail.com",
+    "first_name": "John",
+    "last_name": "Doe"
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css') }}"  />
+    </head>
+
+    <body>
+        <div class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
+        </div>
+
+        <div class="body-content">
+            <p>Home page for Python bootcamp.</p>
+            <hr/>
+            <footer>
+                <p>&copy; BairesDev 2021</p>
+            </footer>
+        </div>
+    </body>
+</html>

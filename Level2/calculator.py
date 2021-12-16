@@ -3,6 +3,7 @@ class Error(Exception):
     Base class for other exceptions
     """
     pass
+
 class FormulaError(Error):
     """
     Exception raised for errors in the formula inputs
