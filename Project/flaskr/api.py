@@ -1,7 +1,5 @@
-from flask import Flask, request, jsonify
+from flask import current_app as app, request, jsonify
 import requests
-
-from . import app
 
 @app.route("/api/todos")
 def todo():

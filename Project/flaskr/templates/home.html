@@ -1,5 +1,18 @@
 {% extends "layout.html" %}
-{% block title %}Home{% endblock %}
+{% block title %}News{% endblock %}
 {% block content %}
-    <p>Home page for Python bootcamp.</p>
+<p class="h3">Python bootcamp - Feed</p>
+<hr />
+{% for entry in feed %}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ entry.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ entry.channel.name }}</h6>
+        <p class="card-text">{{ entry.description }}</p>
+        <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i> {{ entry.views }} views</small></p>
+        <a href="/tracking/{{ entry.id }}" class="card-link" target="_
+        tab">See more...</a>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}

@@ -5,14 +5,29 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Flask",
-            "cwd": "${workspaceFolder}/flaskr",
+            "name": "Python: CLI",
             "type": "python",
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "app.py",
-                "FLASK_ENV": "development"
+                "FLASK_APP": "wsgi.py",
+                "FLASK_ENV": "development",
+                "SQLALCHEMY_DATABASE_URI": "sqlite:///db.sqlite3"
+            },
+            "args": [
+                "fetch-rss"
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "wsgi.py",
+                "FLASK_ENV": "development",
+                "SQLALCHEMY_DATABASE_URI": "sqlite:///db.sqlite3"
             },
             "args": [
                 "run",

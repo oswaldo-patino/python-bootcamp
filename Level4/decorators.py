@@ -18,8 +18,10 @@ def validate_regex(regex):
         def wrapper_validate_regex(*args, **kwargs):
             match = False
             for arg in args:
-                match = evaluate_regex(arg, regex)
-                return match
+                if evaluate_regex(arg, regex):
+                    print(f"{arg}: match")
+                else:
+                    raise Exception(f"{arg}: not match!")
             return func(args, kwargs)
         return wrapper_validate_regex
     return decorator_validate_regex

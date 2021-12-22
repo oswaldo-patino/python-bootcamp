@@ -4,7 +4,7 @@ def regex_letters_joined_with_underscore(text: str) -> bool:
     """
     
     """
-    regex = re.compile(r"^[a-z]+_[a-z]+$")
+    regex = re.compile(r"^[a-z]+(?:_[a-z]+)+$")
     match = bool(regex.search(text))
     return match
 
